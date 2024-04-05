@@ -1,8 +1,15 @@
 html{
+  --background-color: rgb(190, 204, 223);
+  --dark-color: rgb(17, 5, 182);
+  --light-color: rgb(162, 170, 241);
+  --dark-shadow: #1e058a;
+ 
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
-  background-color: rgb(240, 211, 240);
+  color: var(--dark-shadow);
+  background-color: var(--background-color);
   text-decoration: none;
+  
 }
 /*---------------------------------------For Home-------------------------------------------*/
 #welcome{
@@ -25,9 +32,9 @@ select {
   outline: none; /* remove the outline shown on focus */
   cursor: pointer; /* change the mouse cursor icon */
 
-  color: rgb(97, 4, 97);  /* text color */
-  background-color: rgb(229, 158, 238);
-  border: 2px solid rgb(97, 4, 97);
+  color: var(--dark-color);  /* text color */
+  background-color: var(--light-color);
+  border: 2px solid var(--dark-color);
 
   border-radius: 5px;  /* round the border corners */
   padding: 5px 10px;
@@ -46,11 +53,11 @@ select {
 }
 
 select:focus {
-  box-shadow: 0px 0px 8px 8px #6e0360;
+  box-shadow: 0px 0px 8px 8px var(--shadow-color);
 }
 
 select:hover {
-  box-shadow: 0px 0px 8px 8px #6e0360;
+  box-shadow: 0px 0px 8px 8px var(--shadow-color);
 }
 
 .submit_button {
@@ -58,9 +65,9 @@ select:hover {
   outline: none; /* remove the outline shown on focus */
   cursor: pointer; /* change the mouse cursor icon */
 
-  color: rgb(97, 4, 97);  /* text color */
-  background-color: rgb(229, 158, 238);
-  border: 2px solid rgb(97, 4, 97);
+  color: var(--dark-color);  /* text color */
+  background-color: var(--light-color);
+  border: 2px solid var(--dark-color);
 
   border-radius: 5px;  /* round the border corners */
   padding: 5px 10px;
@@ -79,11 +86,11 @@ select:hover {
 }
    
 .submit_button:focus {
-  box-shadow: 0px 0px 8px 8px #6e0360;
+  box-shadow: 0px 0px 8px 8px var(--shadow-color);
 }
 
 .submit_button:hover {
-  box-shadow: 0px 0px 8px 8px #6e0360;
+  box-shadow: 0px 0px 8px 8px var(--shadow-color);
 }
 /*-------------------------------------For Nutrition-----------------------------------------*/
 #name_label{
@@ -94,9 +101,9 @@ select:hover {
 }
 
 .nutrition_div{
-  color: rgb(97, 4, 97);  /* text color */
-  background-color: rgb(229, 158, 238);
-  border: 2px solid rgb(97, 4, 97);
+  color: var(--dark-color);  /* text color */
+  background-color: var(--light-color);
+  border: 2px solid var(--dark-color);
   padding-bottom: 40px;
   max-width: 60%;
   min-width: 500px;

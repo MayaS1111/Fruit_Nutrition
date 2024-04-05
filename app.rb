@@ -21,7 +21,7 @@ get("/") do
   erb(:home)
 end
 
-get("/nutrition") do
+get("/fruit") do
   @param = params.fetch("fruit_name")
 
   api_url = "https://www.fruityvice.com/api/fruit/#{@param}"
@@ -40,14 +40,33 @@ get("/nutrition") do
   @order = @parsed_data.fetch("order")
   @genus = @parsed_data.fetch("genus")
 
-  erb(:nutrition)
+  erb(:fruit)
 end
 
-get("/nutritio") do
+get("/nutrition") do
+  api_url = "https://www.fruityvice.com/api/fruit/all"
+  raw_data =  HTTP.get(api_url)
+  raw_data_string = raw_data.to_s
+  @parsed_data = JSON.parse(raw_data_string)
+
+  fruit_array = []
+  count = 0
+
+  @parsed_data.each do |fruit_info|
+    name = fruit_info.fetch("name")
+    fruit_array.push(name)
+  end
+
+  @fruit_array = fruit_array.sort
+
+  erb(:home)
+end
+
+get("/gallary") do
   puts params
   @param = params.fetch("fruit_name")
 
-  api_url = "https://www.fruityvice.com/api/fruit/all"
+  api_url = "https://www.fruityvice.com/api/fruit/all/image"
   raw_data =  HTTP.get(api_url)
   raw_data_string = raw_data.to_s
   @parsed_data = JSON.parse(raw_data_string)
