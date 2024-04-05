@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link ref="stylesheet" href="/public/fruit_dropdown_styles.css">
+  </header>
+  <body>
+    <p> home: <%= @fruit_array %> </p>
+
+    <div>
+      <select class="fruit_dropdown" name="fruit">
+        <% @fruit_array.each do |name|%>
+        <option value="<%=name%>"><%=name%></option>
+        <% end %>
+      </select>
+    </div>
+
+  </body>  
+</html>  
