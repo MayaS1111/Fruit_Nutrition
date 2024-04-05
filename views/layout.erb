@@ -8,14 +8,16 @@
   </head>
 
   <body class="page_body">
-    <nav class="navbar">
-      <div id="log_link"><a href="/">Fruit Nutrition</a></div>
-      <div><a href="/">Home</a></div>
-      <div><a href="/nutrition">All Fruit's Nutrition</a></div>
-      <div><a href="/gallary">Gallary</a></div>
-    </nav>
+    <div class="wrapper">
+      <nav class="navbar">
+        <div id="log_link"><a href="/">Fruit Nutrition</a></div>
+        <div id="home_link"><a href="/">Home</a></div>
+        <div id="nutrition_link"><a href="/nutrition">All Fruit's Nutrition</a></div>
+        <div id="gallary_link"><a href="/gallary">Gallary</a></div>
+      </nav>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 
   <footer>

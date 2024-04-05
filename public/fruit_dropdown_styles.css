@@ -13,9 +13,14 @@ html{
 
 /*---------------------------------------Nav-------------------------------------------*/
 .page_body{
-  margin: 0px
+  margin: 0px;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 nav{
   color: var(--dark-color);
   font-size: 30px;
@@ -46,8 +51,13 @@ nav a:focus{
 
 nav div{
   display:flex;
-  justify-content: left;
-  align-items:center;
+  align-items: center;
+}
+
+#home_link, #nutrition_link, #gallary_link{
+  margin: 0px 50px;
+  padding-top: 10px;
+
 }
 /*---------------------------------------For Home-------------------------------------------*/
 #welcome{
@@ -134,8 +144,7 @@ select:hover {
 #name_label{
   font-size: 60px;
   margin: 10px auto;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
 }
 
 .fruit_div{
@@ -185,5 +194,17 @@ select:hover {
 }
 /*---------------------------------------Footer-------------------------------------------*/
 footer{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;   
+  background-color: var(--light-color);
+  border-top: 3px solid var(--dark-color);
+}
 
+
+footer p{
+  margin: 4px 20px;
 }
