@@ -7,7 +7,7 @@ html{
 /*---------------------------------------For Home-------------------------------------------*/
 #welcome{
   font-size: 60px;
-  margin: 80px auto;
+  margin: 70px auto;
   display: flex;
   justify-content: center;
 }
@@ -97,14 +97,19 @@ select:hover {
   color: rgb(97, 4, 97);  /* text color */
   background-color: rgb(229, 158, 238);
   border: 2px solid rgb(97, 4, 97);
+  padding-bottom: 40px;
+  max-width: 60%;
+  min-width: 500px;
+  margin: auto;
+  border-radius: 20px;
 }
 
 #nutrition_label, #additional_label{
-  
+  font-size: 30px;
 }
 
 .nutrition_div label{
-  margin: 10px auto;
+  margin: 10px auto 0px auto;
   display: flex;
   justify-content: center;
 }
