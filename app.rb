@@ -22,7 +22,23 @@ get("/") do
   erb(:home)
 end
 
-get("/nutrition") do
+get("/nutrition/:fruit_name") do
+
+  api_url = "https://www.fruityvice.com/api/fruit/all"
+  raw_data =  HTTP.get(api_url)
+  raw_data_string = raw_data.to_s
+  @parsed_data = JSON.parse(raw_data_string)
+
+  fruit_info = @parsed_data.fetch(0)
+  @fruit_names = fruit_info.fetch("name")
+
+  erb(:nutrition)
+end
+
+get("/nutrition/:fruit_name") do
+  @fruit_name = params.get("fruit_name")
+  puts @fruit_name
+
   api_url = "https://www.fruityvice.com/api/fruit/all"
   raw_data =  HTTP.get(api_url)
   raw_data_string = raw_data.to_s

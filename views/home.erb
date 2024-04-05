@@ -5,13 +5,15 @@
   </header>
 
   <body>
-    <h2> home: <%= @fruit_array %> </h2>
-
+    <h1 id="welcome">Welcome!</h1>
+    
+    <label for="fruit" id="question">What fruit would you like to know the nutrition of?</label>
     <div class="fruit_dropdown" name="fruit">
       <select>
         <% @fruit_array.each do |name|%>
-        <option value="<%=name%>"><%=name%></option>
+        <option name="fruit_name" value="<%=name%>"><%=name%></option>
         <% end %>
+        <option value= "/nutrition"> home </option>
       </select>
     </div>
  

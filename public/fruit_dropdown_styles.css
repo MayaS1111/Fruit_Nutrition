@@ -1,30 +1,52 @@
-h2{
+html{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:blue;
+}
+/*---------------------------------------For Home-------------------------------------------*/
+#welcome{
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
 }
 
+#question{
+  font-size: 20px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/*---For fruit_dropdown---*/
 select {
   appearance: none; /* remove default appearance set by the browser */
   outline: none; /* remove the outline shown on focus */
   cursor: pointer; /* change the mouse cursor icon */
 
-  color: navy;  /* text color */
-  background-color: lightblue;
-  border: 2px solid blue;
+  color: rgb(97, 4, 97);  /* text color */
+  background-color: rgb(229, 158, 238);
+  border: 2px solid rgb(97, 4, 97);
 
   border-radius: 5px;  /* round the border corners */
   padding: 5px 10px;
-  width: 200px;
+  width: 400px;
   height: 40px;
-  box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 5px 8px 5px rgba(24, 0, 0, 0.8);
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
+  
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 select:focus {
-  box-shadow: 0px 0px 8px 8px #4259db;
+  box-shadow: 0px 0px 8px 8px #6e0360;
+}
+
+select:hover {
+  box-shadow: 0px 0px 8px 8px #6e0360;
 }
    
+/*-------------------------------------For Nutrition-----------------------------------------*/
