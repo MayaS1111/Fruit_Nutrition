@@ -49,17 +49,53 @@ get("/nutrition") do
   raw_data_string = raw_data.to_s
   @parsed_data = JSON.parse(raw_data_string)
 
-  fruit_array = []
+  name_array = []
   count = 0
 
   @parsed_data.each do |fruit_info|
     name = fruit_info.fetch("name")
-    fruit_array.push(name)
+    name_array.push(name)
   end
 
-  @fruit_array = fruit_array.sort
+  @name_array = name_array.sort
 
-  erb(:home)
+  @calories_array = []
+  @fat_array = []
+  @sugar_array = []
+  @carbohydrates_array = []
+  @protein_array = []
+  @family_array = []
+  @order_array = []
+  @genus_array = []
+
+  @name_array.each do |fruit|
+    @parsed_data.each do |fruit_info|
+      @name = fruit_info.fetch("name")
+
+      if fruit == @name
+        nutrition_hash = fruit_info.fetch("nutritions")
+        calories = nutrition_hash.fetch("calories")
+        fat = nutrition_hash.fetch("fat")
+        sugar = nutrition_hash.fetch("sugar")
+        carbohydrates = nutrition_hash.fetch("carbohydrates")
+        protein = nutrition_hash.fetch("protein")
+        family = fruit_info.fetch("family")
+        order = fruit_info.fetch("order")
+        genus = fruit_info.fetch("genus")  
+
+        @calories_array.push(calories) 
+        @fat_array.push(fat)
+        @sugar_array.push(sugar)
+        @carbohydrates_array.push(carbohydrates)
+        @protein_array.push(protein)
+        @family_array.push(family)
+        @order_array.push(order)
+        @genus_array.push(genus)
+      end
+    end  
+  end  
+
+  erb(:nutrition)
 end
 
 get("/gallary") do
@@ -74,5 +110,5 @@ get("/gallary") do
   fruit_info = @parsed_data.fetch(0)
   @fruit_names = fruit_info.fetch("name")
 
-  erb(:nutrition)
+  erb(:gallary)
 end

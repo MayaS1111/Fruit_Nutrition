@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link rel="stylesheet" href="/public/fruit_dropdown_styles.css">
+  </header>
+
+  <body class="nutrition_body">
+    <% count = 0 %>
+    <% @name_array.each do |name|%>
+      <div class="nutrition_div" id="div_<%=count%>">
+        <div class="fruit_name_div">
+          <label id="name_label" name="name_label"><%=name%></label>
+        </div>
+      </div>
+      <% count = count + 1 %>
+    <% end %>
+  </body>  
+
+  <footer>
+    <p>Name: <%=@name_array%></p>
+    <p>Calories: <%=@calories_array%></p>
+    <p>Fat: <%=@fat_array%></p>
+    <p>Sugar: <%=@sugar_array%></p>
+    <p>Carbohydrates: <%=@carbohydrates_array%></p>
+    <p>Protein: <%=@protein_array%></p>
+    <p>Family: <%=@family_array%></p>
+    <p>Order: <%=@order_array%></p>
+    <p>Genus: <%=@genus_array%></p>
+  </footer>
+</html>  

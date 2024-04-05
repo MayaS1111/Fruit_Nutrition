@@ -9,8 +9,8 @@ html{
   color: var(--dark-shadow);
   background-color: var(--background-color);
   text-decoration: none;
-  
 }
+
 /*---------------------------------------For Home-------------------------------------------*/
 #welcome{
   font-size: 60px;
@@ -92,7 +92,7 @@ select:hover {
 .submit_button:hover {
   box-shadow: 0px 0px 8px 8px var(--shadow-color);
 }
-/*-------------------------------------For Nutrition-----------------------------------------*/
+/*-------------------------------------For Fruit-----------------------------------------*/
 #name_label{
   font-size: 60px;
   margin: 10px auto;
@@ -100,7 +100,7 @@ select:hover {
   justify-content: center;
 }
 
-.nutrition_div{
+.fruit_div{
   color: var(--dark-color);  /* text color */
   background-color: var(--light-color);
   border: 2px solid var(--dark-color);
@@ -113,6 +113,30 @@ select:hover {
 
 #nutrition_label, #additional_label{
   font-size: 30px;
+}
+
+.fruit_div label{
+  margin: 10px auto 0px auto;
+  display: flex;
+  justify-content: center;
+}
+/*-------------------------------------For Nutrition-----------------------------------------*/
+
+.nutrition_div{
+  color: var(--dark-color);  /* text color */
+  background-color: var(--light-color);
+  border: 2px solid var(--dark-color);
+  padding-bottom: 40px;
+  max-width: 20%;
+  min-width: 200px;
+  border-radius: 20px;
+
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 7.5px 15px;
+    overflow: hidden;
 }
 
 .nutrition_div label{
