@@ -9,13 +9,15 @@ get("/") do
   @parsed_data = JSON.parse(raw_data_string)
 
   fruit_info = @parsed_data.fetch(1)
-  @fruit_array = []
+  fruit_array = []
   count = 0
 
   @parsed_data.each do |fruit_info|
     name = fruit_info.fetch("name")
-    @fruit_array.push(name)
+    fruit_array.push(name)
   end
+
+  @fruit_array = fruit_array.sort
 
   erb(:home)
 end
