@@ -99,10 +99,7 @@ get("/nutrition") do
 end
 
 get("/gallary") do
-  puts params
-  @param = params.fetch("fruit_name")
-
-  api_url = "https://www.fruityvice.com/api/fruit/all/image"
+  api_url = "https://www.fruityvice.com/api/fruit/all"
   raw_data =  HTTP.get(api_url)
   raw_data_string = raw_data.to_s
   @parsed_data = JSON.parse(raw_data_string)
