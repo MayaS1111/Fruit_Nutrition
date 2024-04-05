@@ -139,8 +139,9 @@ select:hover {
 /*-------------------------------------For Fruit-----------------------------------------*/
 #name_label{
   font-size: 60px;
-  margin: 10px auto;
-  display: inline-block;
+  margin:40px auto;
+  display: flex;
+  justify-content: center;
 }
 
 .fruit_div{
@@ -164,15 +165,23 @@ select:hover {
   justify-content: center;
 }
 /*-------------------------------------For Nutrition-----------------------------------------*/
+#title_nutrition{
+  font-size: 60px;
+  margin: 20px auto 0px;
+  display: flex;
+  justify-content: center;
+}
+
 .nutrition_body{
   margin:0;
   display: flex;
   justify-content: center;
 }
+
 .fruit_grid{
   display: grid;
   grid-template-columns: auto auto auto auto;
-  padding: 50px;
+  padding: 20px 50px 50px 50px;
 
 }
 
@@ -198,6 +207,7 @@ select:hover {
 #name_label_n{
   font-size: 30px;
 }
+
 /*---------------------------------------Footer-------------------------------------------*/
 footer{
   display: flex;

@@ -5,6 +5,7 @@
   </header>
 
   <body class="nutrition_body">
+    <h1 id="title_nutrition">All Fruits</h1>
     <div class="fruit_grid">
       <% count = 0 %>
       <% @name_array.each do |name|%>
@@ -12,6 +13,22 @@
           <div class="fruit_name_div">
             <label id="name_label_n" name="name_label"><%=name%></label>
           </div>
+          <br>
+          <section>
+            <label id="nutrition_label__<%=count%>" name="nutrition_label">Nutrition</label>
+            <label name="calories_label_<%=count%>">Calories: <%=@calories_array[count]%></label>
+            <label name="fat_label_<%=count%>">Fat: <%=@fat_array[count]%></label>
+            <label name="sugar_label_<%=count%>">Sugar: <%=@sugar_array[count]%></label>
+            <label name="carbohydrates_label_<%=count%>">Carbohydrates: <%=@carbohydrates_array[count]%></label>
+            <label name="protein_label_<%=count%>">Protein: <%=@protein_array[count]%></label>
+          </section>
+          <br>
+          <section>
+            <label id="additional_label_<%=count%>" name="additional_label">Additional Information</label>
+            <label name="family_label_<%=count%>">Family: <%=@family_array[count]%></label>
+            <label name="order_label_<%=count%>">Order: <%=@order_array[count]%></label>
+            <label name="genus_label_<%=count%>">Genus: <%=@genus_array[count]%></label>
+          </section>
         </div>
         <% count = count + 1 %>
       <% end %>
