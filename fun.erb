@@ -14,10 +14,10 @@
         <label name="order_label">Order: <%=order%></label>
         <label name="genus_label">Genus: <%=genus%></label>
       </section>
+
+
 =begin
-
-moving footer 
-
+----moving footer 
 footer{
   display: flex;
   justify-content: center;
@@ -27,5 +27,25 @@ footer{
   height: 30px;   
   background-color: var(--light-color);
   border-top: 3px solid var(--dark-color);
+}
+
+
+----footer at bottom 
+.page_body{
+  margin: 0px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 30px;   
+  background-color: var(--light-color);
+  border-top: 3px solid var(--dark-color);
+  margin-top: auto;
 }
 =end

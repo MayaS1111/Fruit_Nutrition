@@ -1,5 +1,5 @@
 html{
-  --background-color: rgb(190, 204, 223);
+  --background-color: rgb(154, 164, 209);
   --dark-color: rgb(17, 5, 182);
   --light-color: rgb(162, 170, 241);
   --dark-shadow: #1e058a;
@@ -14,31 +14,41 @@ html{
 /*---------------------------------------Nav-------------------------------------------*/
 .page_body{
   margin: 0px;
-  padding-bottom: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav{
   color: var(--dark-color);
   font-size: 30px;
   display: flex;
+  justify-content: center;
   padding-bottom: 10px;
   background-color: var(--light-color);
   border-bottom: 3px solid var(--dark-color);
   padding: 10px;
   margin-bottom: 10px;
 }
+
 nav a{
   text-decoration: none;
   padding: 0px 10px 10px;
+  color: var(--dark-shadow)
 }
 
 nav a:focus{
   color: var(--dark-color);
 }
 
+#nav_space{
+  margin: 0px auto;
+}
+
 #log_link{
   font-family:fantasy;
   font-size: 50px;
+  margin-left: 20px;
   margin-right: 20px;
   padding-top: 10px;
   display: flex;
@@ -46,12 +56,12 @@ nav a:focus{
 }
 
 nav div{
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
 #home_link, #nutrition_link, #gallary_link{
-  margin: 0px 50px;
+  margin: 0px 30px;
   padding-top: 10px;
 
 }
@@ -206,18 +216,19 @@ select:hover {
 
 #name_label_n{
   font-size: 30px;
+  padding-top: 20px;
 }
 
 /*---------------------------------------Footer-------------------------------------------*/
 footer{
   display: flex;
   justify-content: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
   height: 30px;   
   background-color: var(--light-color);
   border-top: 3px solid var(--dark-color);
+  margin-top: auto;
 }
 
 
