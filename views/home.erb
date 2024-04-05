@@ -5,18 +5,18 @@
   </header>
 
   <body>
-    <h1 id="welcome">Welcome!</h1>
-    
-    <label for="fruit" id="question">What fruit would you like to know the nutrition of?</label>
-    <div class="fruit_dropdown" name="fruit">
-      <select>
-        <% @fruit_array.each do |name|%>
-        <option name="fruit_name" value="<%=name%>"><%=name%></option>
-        <% end %>
-        <option value= "/nutrition"> home </option>
-      </select>
-    </div>
- 
-
+    <form action="/nutrition">
+      <h1 id="welcome">Welcome!</h1>
+      
+      <label for="fruit" id="question">What fruit would you like to know the nutrition of?</label>
+      <div class="fruit_dropdown" name="fruit">
+        <select id="select" name="fruit_name">
+          <% @fruit_array.each do |name|%>
+          <option name="fruit_name" value="<%=name%>"><%=name%></option>
+          <% end %>
+        </select>
+        <input type="submit">
+      </div>
+    </form>
   </body>  
 </html>  

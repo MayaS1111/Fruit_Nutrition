@@ -22,8 +22,9 @@ get("/") do
   erb(:home)
 end
 
-get("/nutrition/:fruit_name") do
-
+get("/nutrition") do
+  @param = params.fetch("fruit_name")
+  
   api_url = "https://www.fruityvice.com/api/fruit/all"
   raw_data =  HTTP.get(api_url)
   raw_data_string = raw_data.to_s
@@ -36,8 +37,7 @@ get("/nutrition/:fruit_name") do
 end
 
 get("/nutrition/:fruit_name") do
-  @fruit_name = params.get("fruit_name")
-  puts @fruit_name
+  @param = params.fetch("fruit_name")
 
   api_url = "https://www.fruityvice.com/api/fruit/all"
   raw_data =  HTTP.get(api_url)
