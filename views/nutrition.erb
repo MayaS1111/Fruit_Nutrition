@@ -5,15 +5,17 @@
   </header>
 
   <body class="nutrition_body">
-    <% count = 0 %>
-    <% @name_array.each do |name|%>
-      <div class="nutrition_div" id="div_<%=count%>">
-        <div class="fruit_name_div">
-          <label id="name_label" name="name_label"><%=name%></label>
+    <div class="fruit_grid">
+      <% count = 0 %>
+      <% @name_array.each do |name|%>
+        <div class="nutrition_div" id="div_<%=count%>">
+          <div class="fruit_name_div">
+            <label id="name_label_n" name="name_label"><%=name%></label>
+          </div>
         </div>
-      </div>
-      <% count = count + 1 %>
-    <% end %>
+        <% count = count + 1 %>
+      <% end %>
+    </div>
   </body>  
 
     <p>Name: <%=@name_array%></p>

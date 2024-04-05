@@ -164,29 +164,39 @@ select:hover {
   justify-content: center;
 }
 /*-------------------------------------For Nutrition-----------------------------------------*/
+.nutrition_body{
+  margin:0;
+  display: flex;
+  justify-content: center;
+}
+.fruit_grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 50px;
 
+}
 
 .nutrition_div{
   color: var(--dark-color);  /* text color */
   background-color: var(--light-color);
   border: 2px solid var(--dark-color);
   padding-bottom: 40px;
-  max-width: 20%;
+  max-width: 100%;
   min-width: 200px;
   border-radius: 20px;
 
-    flex: 1 1 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 7.5px 15px;
-    overflow: hidden;
+  margin: 15px;
+  overflow: hidden;
 }
 
 .nutrition_div label{
   margin: 10px auto 0px auto;
   display: flex;
   justify-content: center;
+}
+
+#name_label_n{
+  font-size: 30px;
 }
 /*---------------------------------------Footer-------------------------------------------*/
 footer{
@@ -198,8 +208,6 @@ footer{
   height: 30px;   
   background-color: var(--light-color);
   border-top: 3px solid var(--dark-color);
-
-
 }
 
 
