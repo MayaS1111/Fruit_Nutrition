@@ -1,8 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <header>
+    <link rel="stylesheet" href="/public/fruit_dropdown_styles.css">
+  </header>
+
+  <body class="nutrition_body">
+    <div class="fruit _name_div">
+      <label id="name_label" name="name_label"><%=@param%></label>
+    </div>
+
+    <div class="nutrition_div">
+      <br>
+      <section>
+        <label id="nutrition_label" name="nutrition_label">Nutrition</label>
+        <label name="calories_label">Calories: <%=@calories%></label>
+        <label name="fat_label">Fat: <%=@fat%></label>
+        <label name="sugar_label">Sugar: <%=@sugar%></label>
+        <label name="carbohydrates_label">Carbohydrates: <%=@carbohydrates%></label>
+        <label name="protein_label">Protein: <%=@protein%></label>
+      </section>
+      <br>
+      <section>
+        <label id="additional_label" name="additional_label">Additional Information</label>
+        <label name="family_label">Family: <%=@family%></label>
+        <label name="order_label">Order: <%=@order%></label>
+        <label name="genus_label">Genus: <%=@genus%></label>
+      </section>
+    </div>
+
     <p> nutrition: <%= @param %> </p>
     <p> nutrition: <%= @parsed_data %> </p>
-    <p> nutrition: <%= @fruit_names %> </p>
   </body>  
 </html>  

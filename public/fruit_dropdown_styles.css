@@ -1,15 +1,19 @@
 html{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  background-color: rgb(240, 211, 240);
+  text-decoration: none;
 }
 /*---------------------------------------For Home-------------------------------------------*/
 #welcome{
-  margin: 50px auto;
+  font-size: 60px;
+  margin: 80px auto;
   display: flex;
   justify-content: center;
 }
 
 #question{
-  font-size: 20px;
+  font-size: 30px;
   margin: 10px auto;
   display: flex;
   justify-content: center;
@@ -28,7 +32,7 @@ select {
   border-radius: 5px;  /* round the border corners */
   padding: 5px 10px;
   width: 400px;
-  height: 40px;
+  height: 60px;
   box-shadow: 5px 8px 5px rgba(24, 0, 0, 0.8);
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -36,7 +40,7 @@ select {
   font-weight: bold;
   text-align: center;
   
-  margin: auto;
+  margin: 30px auto 5px auto;
   display: flex;
   justify-content: center;
 }
@@ -49,7 +53,7 @@ select:hover {
   box-shadow: 0px 0px 8px 8px #6e0360;
 }
 
-select {
+.submit_button {
   appearance: none; /* remove default appearance set by the browser */
   outline: none; /* remove the outline shown on focus */
   cursor: pointer; /* change the mouse cursor icon */
@@ -60,8 +64,8 @@ select {
 
   border-radius: 5px;  /* round the border corners */
   padding: 5px 10px;
-  width: 400px;
-  height: 40px;
+  width: 100px;
+  height: 60px;
   box-shadow: 5px 8px 5px rgba(24, 0, 0, 0.8);
 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -69,9 +73,38 @@ select {
   font-weight: bold;
   text-align: center;
   
-  margin: auto;
+  margin: 10px auto 20px auto;
   display: flex;
   justify-content: center;
 }
    
+.submit_button:focus {
+  box-shadow: 0px 0px 8px 8px #6e0360;
+}
+
+.submit_button:hover {
+  box-shadow: 0px 0px 8px 8px #6e0360;
+}
 /*-------------------------------------For Nutrition-----------------------------------------*/
+#name_label{
+  font-size: 60px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.nutrition_div{
+  color: rgb(97, 4, 97);  /* text color */
+  background-color: rgb(229, 158, 238);
+  border: 2px solid rgb(97, 4, 97);
+}
+
+#nutrition_label, #additional_label{
+  
+}
+
+.nutrition_div label{
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+}
