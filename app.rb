@@ -15,8 +15,15 @@ get("/") do
     name = fruit_info.fetch("name")
     fruit_array.push(name)
   end
-
   @fruit_array = fruit_array.sort
+
+  #The following gave errors
+  @fruit_array -= ["Ceylon Gooseberry"]
+  @fruit_array -= ["GreenApple"]
+  @fruit_array -= ["Japanese Persimmon"]
+  @fruit_array -= ["Horned Melon"]
+
+
 
   erb(:home)
 end
